@@ -7,14 +7,20 @@ public class InstructorManager extends UserManager{
     }
 
     public void addNewCourse(Course course){
-        System.out.println("Yeni kurs eklendi" + course.getName());
+        System.out.println("Yeni kurs eklendi " + course.getName());
     }
 
     public void deleteCourse(Course course){
-        System.out.println("Kurs silindi" + course.getName());
+        System.out.println("Kurs silindi " + course.getName());
     }
 
     public void updateCourse(Course course){
-        System.out.println("Kurs güncellendi" + course.getName());
+        System.out.println("Kurs güncellendi " + course.getName());
+    }
+
+    public void addMultipleCourse(Course[] courses){
+        for (Course course : courses){
+            addNewCourse(course);
+        }
     }
 }
